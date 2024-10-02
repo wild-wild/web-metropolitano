@@ -8,9 +8,9 @@
     @laravelPWA
     <!--Bootstrap CSS-->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- estilos personalizados -->
     <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
-    {{-- estilos propiso --}}
-    <link rel="stylesheet" href="{{ asset('css/diseño.css') }}">
+    <link href="{{ asset('css/estilos2.css') }}" rel="stylesheet">
     <!-- iconos fontaweasome -->
     <link href="{{ asset('iconos/fontawesome-free-6.1.1-web/css/all.css') }}" rel="stylesheet">
     <!--titulo-->

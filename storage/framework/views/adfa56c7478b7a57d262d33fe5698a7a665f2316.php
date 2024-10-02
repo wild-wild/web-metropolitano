@@ -9,9 +9,9 @@
     <?php $config = (new \LaravelPWA\Services\ManifestService)->generate(); echo $__env->make( 'laravelpwa::meta' , ['config' => $config])->render(); ?>
     <!--Bootstrap CSS-->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <!-- estilos personalizados -->
     <link href="<?php echo e(asset('css/estilos.css')); ?>" rel="stylesheet">
-    
-    <link rel="stylesheet" href="<?php echo e(asset('css/diseño.css')); ?>">
+    <link href="<?php echo e(asset('css/estilos2.css')); ?>" rel="stylesheet">
     <!-- iconos fontaweasome -->
     <link href="<?php echo e(asset('iconos/fontawesome-free-6.1.1-web/css/all.css')); ?>" rel="stylesheet">
     <!--titulo-->

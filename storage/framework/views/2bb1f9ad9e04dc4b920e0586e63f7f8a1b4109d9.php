@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('title', 'offline'); ?>
 <?php $__env->startSection('contenidoEnBody'); ?>
 
