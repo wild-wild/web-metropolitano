@@ -14,8 +14,11 @@ return [
     | any other location as required by the application or its packages.
     |
     */
+    // personalizar nombre para usar en cualquier parte de la aplicación
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'nombreApp' => 'Sistema de Licencias',
+
+    'name' => env('APP_NAME', 'Sistema de Licencias'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +59,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', '/'),
+    'asset_url' => env('ASSET_URL'),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +72,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' =>  'America/La_Paz','UTC-4', // 'America/La_Paz'
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +85,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +98,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,6 +184,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -194,6 +199,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 
@@ -210,6 +218,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class, 
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ])->toArray(),
 
 ];

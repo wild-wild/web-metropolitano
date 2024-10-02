@@ -1,3 +1,74 @@
-.bg_home {
-    background-color: blue;
+/* crea variables de colores */
+:root {
+    --color-primario: #273866;
+    --color-secundario: #252525;
+    --color-terciario: #00E192;
+}
+/* crea variables de colores */
+.bg_color_primario {
+    background-color: var(--color-primario);
+}
+.bg_color_secundario {
+    background-color: var(--color-secundario);
+}
+.bg_color_terciario {
+    background-color: var(--color-terciario);
+}
+
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        opacity: 0; /* Fully invisible */
+    }
+}
+
+.notificacion {
+    animation: parpadeo 1s ease-in-out infinite alternate;
+}
+/* colores para adminLTE */
+/* Admin LTE Sidebar */
+.sidebar-dark-info {
+    background: var(--color-primario) !important;
+    box-shadow: 0 0 10px #797979;
+}
+
+/* Admin LTE Navbar */
+.navbar-white {
+    background: #f0f0f0 !important;
+    box-shadow: 0 0 10px #797979;
+}
+/* hover */
+.sidebar-dark-info .nav-sidebar>.nav-item>.nav-link.active {
+        background-color:  var(--color-secundario) !important;
+        font-size: 16px;
+}
+/* cambiar color del boton principal de bootstrap */
+.btn-primary {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+/* el hover */
+.btn-primary:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(141, 73, 37, 0.5);
+}
+.btn-primary.active, .btn-primary:active {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.modal {
+    z-index: 9995 !important;
+}
+.select2-search__field {
+    z-index: 10000 !important;
+}
+.select2-container {
+    z-index: 10000 !important;
 }
